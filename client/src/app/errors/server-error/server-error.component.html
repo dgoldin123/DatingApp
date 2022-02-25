@@ -1,0 +1,15 @@
+<h4>Internal Server Error  - do not refresh</h4>
+<ng-container *ngIf="error">
+    <h5 class="text-danger">Error: {{error.message}}</h5>
+    <p class="font-weight-bold">Not angular's fault</p>
+    <ol>
+        <li>chrome dev tools</li>
+        <li>network tab</li>
+        <li>failng request - URL verify correct</li>
+        <li>view error in postman</li>
+    </ol>
+    <p>stck trace</p>
+    <code class="mt-5" style="background-color: whitesmoke;">
+        {{error.details}}
+    </code>
+</ng-container>
