@@ -22,7 +22,7 @@ namespace API
         */
         
         //new code begin
-        public async Task Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
             using var scope = host.Services.CreateScope();

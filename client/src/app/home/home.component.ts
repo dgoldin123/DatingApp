@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class HomeComponent implements OnInit {
   registerMode: boolean = false;
-  baseUrl = environment.baseUrl;
+  baseUrl = environment.apiUrl;
   
   constructor() { }
 
