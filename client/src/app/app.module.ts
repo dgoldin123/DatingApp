@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
@@ -24,16 +24,18 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { LoadingInterceptor } from './_interceptors/loading.interceptor';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { TextInputComponent } from './_forms/text-input/text-input.component';
+import { DateInputComponent } from './_forms/date-input/date-input.component';
 
 @NgModule({
   declarations: [
     AppComponent, NavComponent, HomeComponent, RegisterComponent, MemberListComponent, MemberDetailComponent, 
     ListsComponent, MessagesComponent, TestErrorsComponent, NotFoundComponent, ServerErrorComponent, MemberCardComponent, 
-    MemberEditComponent, PhotoEditorComponent
+    MemberEditComponent, PhotoEditorComponent, TextInputComponent, DateInputComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, FormsModule, SharedModule,
-    NgxSpinnerModule, FileUploadModule
+    BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule,
+    SharedModule, NgxSpinnerModule, FileUploadModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
