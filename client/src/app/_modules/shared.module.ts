@@ -8,17 +8,18 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { TimeagoModule } from 'ngx-timeago';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,BsDropdownModule.forRoot(), ToastrModule.forRoot({positionClass: 'toast-bottom-right'}),
     TabsModule.forRoot(), NgxGalleryModule, BsDatepickerModule.forRoot(), PaginationModule.forRoot(),
-    ButtonsModule.forRoot(), TimeagoModule.forRoot()
+    ButtonsModule.forRoot(), TimeagoModule.forRoot(), ModalModule.forRoot()
   ],
   exports: [
     BsDropdownModule, ToastrModule, TabsModule, NgxGalleryModule, BsDatepickerModule, PaginationModule,
-    ButtonsModule, TimeagoModule],
+    ButtonsModule, TimeagoModule, ModalModule],
   providers: [{ provide: BsDropdownConfig, useValue: { isAnimated: true, autoClose: true }}]
 })
 export class SharedModule { }
