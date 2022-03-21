@@ -23,6 +23,4 @@ export class MemberCardComponent implements OnInit {
       this.toastr.success('You Have Liked ' + member.knownAs);
     });
   }
-
-  
 }

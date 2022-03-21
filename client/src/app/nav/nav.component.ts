@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { environment } from 'src/environments/environment';
 import { AccountService } from '../_services/account.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { AccountService } from '../_services/account.service';
 })
 export class NavComponent implements OnInit {
   model: any = {};
+  currentEnv = environment.currentEnv
   //public to use in html 
   constructor(
     public accountService: AccountService, 
